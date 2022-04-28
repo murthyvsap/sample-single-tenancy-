@@ -13,7 +13,8 @@
     "@sap/cds": "^5.9.3",
     "express": "^4.17.1",
     "passport": ">=0.4.1",
-    "hdb": "^0.19.0"
+    "hdb": "^0.19.0",
+    "@sap/xssec": "^3"
   },
   "scripts": {
     "genres": "cds serve test/genres.cds",
@@ -28,6 +29,9 @@
       "[production]": {
         "db": {
           "kind": "hana-cloud"
+        },
+        "auth": {
+          "kind": "xsuaa"
         }
       }
     }
