@@ -10,9 +10,10 @@
     "index.js"
   ],
   "dependencies": {
-    "@sap/cds": ">=5.9",
+    "@sap/cds": "^5.9.3",
     "express": "^4.17.1",
-    "passport": ">=0.4.1"
+    "passport": ">=0.4.1",
+    "hdb": "^0.19.0"
   },
   "scripts": {
     "genres": "cds serve test/genres.cds",
@@ -23,6 +24,11 @@
     "requires": {
       "db": {
         "kind": "sql"
+      },
+      "[production]": {
+        "db": {
+          "kind": "hana-cloud"
+        }
       }
     }
   }
